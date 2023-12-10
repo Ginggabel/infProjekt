@@ -220,7 +220,7 @@
                     </a>
 
                     <!-- Scandium -->
-                    <a class="box metall" href="Elemente/Sc.html">
+                    <a class="box metall" onclick="checkElement('Sc')">
                         <div class="Ozahl">21</div>
                         <div class="Masse">44.96</div>
                         <div class="ElSymbol">Sc</div>
@@ -228,7 +228,7 @@
                     </a>
 
                     <!-- Titanium -->
-                    <a class="box metall" href="Elemente/Ti.html">
+                    <a class="box metall" onclick="checkElement('Ti')">
                         <div class="Ozahl">22</div>
                         <div class="Masse">47.87</div>
                         <div class="ElSymbol">Ti</div>
@@ -237,7 +237,7 @@
 
                    
                         <!-- Vanadium -->
-                        <a class="box metall" href="Elemente/V.html">
+                        <a class="box metall" onclick="checkElement('V')">
                             <div class="Ozahl">23</div>
                             <div class="Masse">50.94</div>
                             <div class="ElSymbol">V</div>
@@ -245,7 +245,7 @@
                         </a>
                         
                         <!-- Chromium -->
-                        <a class="box metall" href="Elemente/Cr.html">
+                        <a class="box metall" onclick="checkElement('Cr')">
                             <div class="Ozahl">24</div>
                             <div class="Masse">51.99</div>
                             <div class="ElSymbol">Cr</div>
@@ -253,7 +253,7 @@
                         </a>
                         
                         <!-- Manganese -->
-                        <a class="box metall" href="Elemente/Mn.html">
+                        <a class="box metall" onclick="checkElement('Mn')">
                             <div class="Ozahl">25</div>
                             <div class="Masse">54.94</div>
                             <div class="ElSymbol">Mn</div>
@@ -261,7 +261,7 @@
                         </a>
                         
                         <!-- Iron -->
-                        <a class="box metall" href="Elemente/Fe.html">
+                        <a class="box metall" onclick="checkElement('Fe')">
                             <div class="Ozahl">26</div>
                             <div class="Masse">55.85</div>
                             <div class="ElSymbol">Fe</div>
@@ -269,7 +269,7 @@
                         </a>
                         
                         <!-- Cobalt -->
-                        <a class="box metall" href="Elemente/Co.html">
+                        <a class="box metall" onclick="checkElement('Co')">
                             <div class="Ozahl">27</div>
                             <div class="Masse">58.93</div>
                             <div class="ElSymbol">Co</div>
@@ -1077,6 +1077,8 @@
                     
                     
             }
+        </script>
+        <script>
             window.addEventListener('message', function(event) {
 
             if (event.data === 'closeIframe') {
@@ -1084,11 +1086,34 @@
                 infIframe.style.display = 'none';
                 x= true;
             }
-        });
-                
-
-                
-			
+            });	
 		</script>
+        <script>
+            const header = document.getElementById('draggable-header');
+            const iframe = document.getElementById('infIframe');
+
+            let isDragging = false;
+            let offsetX, offsetY;
+
+            header.addEventListener('mousedown', (e) => {
+                isDragging = true;
+                offsetX = e.clientX - iframe.getBoundingClientRect().left;
+                offsetY = e.clientY - iframe.getBoundingClientRect().top;
+            });
+
+            document.addEventListener('mouseup', () => {
+                isDragging = false;
+            });
+
+            document.addEventListener('mousemove', (e) => {
+                if (isDragging) {
+                    const x = e.clientX - offsetX;
+                    const y = e.clientY - offsetY;
+
+                    iframe.style.left = `${x}px`;
+                    iframe.style.top = `${y}px`;
+                }
+            });
+        </script>
     </body>
 </html>
