@@ -1,0 +1,1094 @@
+ <!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <title>Periodensystem</title>
+        <link rel="stylesheet" href="style.css">
+		
+        
+		
+    </head>
+    <body>
+        <header>
+            <h1>Periodensystem der Elemente</h1>
+			<p id="output"></p>
+		</header>
+        
+        <main class="content">
+            
+            <section id ="Grid" class="grid">
+            
+                    <article onclick="" >Periode/Gruppe</article>
+                    <a class="HG" href="">I A</a>
+                    <a class="HG">II A</a> 
+                    <a class="HG B">III B</a>
+                    <a class="HG B">IV B</a>
+                    <a class="HG B">V B</a>
+                    <a class="HG B">VI B</a>
+                    <a class="HG B">VII B</a>
+                    <a class="HG B"id="IVB">VIII B</a>
+                    <a class="HG B">I B</a>
+                    <a class="HG B">II B</a>
+                    <a class="HG">III A</a>
+                    <a class="HG">IV A</a>                
+                    <a class="HG">V A</a>
+                    <a class="HG">VI A</a>
+                    <a class="HG">VII A</a>
+                    <a class="HG">VIII A</a>
+                    
+                 
+                    
+                    <a id="p1">1.</a>
+                    <a id="p2">2.</a>  
+                    <a id="p3">3.</a>
+                    <a id="p4">4.</a>
+                    <a id="p5">5.</a>  
+                    <a id="p6">6.</a>
+                    <a id="p7">7.</a>
+            
+                    <a id="legende" class="Legende">
+                        <img src="Legende.png">
+                    </a>
+                    <!--<a id="blank0" class="blank"></a>-->
+                    <a id="blank1" class="blank"></a>
+                    <a id="blank2" class="blank"></a>
+                    <a id="blank3" class="blank"></a>
+                    <a id="blank4" class="blank"></a>
+                    <a id="blank4_1" class="blank"></a>
+                    <a id="blank4_2" class="blank"></a>
+                    <a id="blank4_3" class="blank"></a>
+
+                      <!-- Wasserstoff -->          
+                    <a id="H" class="box nmetall"  onclick="checkElement('H')">
+                        <div class="Ozahl">1</div>
+                        <div class="Masse">1.01</div>
+                        <div class="ElSymbol">H</div>
+                        <div class="Name">Wasserstoff</div>                        
+                    </a>
+
+                    <!-- Helium -->
+                    <a id ="He" class="box nmetall"  onclick="checkElement('He')">
+                        <div class="Ozahl">2</div>
+                        <div class="Masse">4.00</div>
+                        <div class="ElSymbol">He</div>
+                        <div class="Name">Helium</div>
+						
+                    </a>
+
+                    <!-- Lithium -->
+                    <a class="box metall" onclick="checkElement('Li')">
+                        <div class="Ozahl">3</div>
+                        <div class="Masse">6.94</div>
+                        <div class="ElSymbol">Li</div>
+                        <div class="Name">Lithium</div>
+                    </a>
+
+                    <!-- Beryllium -->
+                    <a class="box metall" onclick="checkElement('Be')">
+                        <div class="Ozahl">4</div>
+                        <div class="Masse">9.01</div>
+                        <div class="ElSymbol">Be</div>
+                        <div class="Name">Beryllium</div>
+                    </a>
+
+                    <!-- Boron -->
+                    <a class="box hmetall" onclick="checkElement('B')">
+                        <div class="Ozahl">5</div>
+                        <div class="Masse">10.81</div>
+                        <div class="ElSymbol">B</div>
+                        <div class="Name">Bor</div>
+                    </a>
+
+                    <!-- Carbon -->
+                    <a class="box nmetall" onclick="checkElement('C')">
+                        <div class="Ozahl">6</div>
+                        <div class="Masse">12.01</div>
+                        <div class="ElSymbol">C</div>
+                        <div class="Name">Kohlenstoff</div>
+                    </a>
+
+                    <!-- Nitrogen -->
+                    <a class="box nmetall" onclick="checkElement('N')">
+                        <div class="Ozahl">7</div>
+                        <div class="Masse">14.01</div>
+                        <div class="ElSymbol">N</div>
+                        <div class="Name">Stickstoff</div>
+                    </a>
+
+                    <!-- Oxygen -->
+                    <a class="box nmetall" onclick="checkElement('O')">
+                        <div class="Ozahl">8</div>
+                        <div class="Masse">16.00</div>
+                        <div class="ElSymbol">O</div>
+                        <div class="Name">Sauerstoff</div>
+                    </a>
+
+                    <!-- Fluorine -->
+                    <a class="box nmetall" onclick="checkElement('F')">
+                        <div class="Ozahl">9</div>
+                        <div class="Masse">19.00</div>
+                        <div class="ElSymbol">F</div>
+                        <div class="Name">Fluor</div>
+                    </a>
+
+                    <!-- Neon -->
+                    <a class="box nmetall" onclick="checkElement('Ne')">
+                        <div class="Ozahl">10</div>
+                        <div class="Masse">20.18</div>
+                        <div class="ElSymbol">Ne</div>
+                        <div class="Name">Neon</div>
+                    </a>
+
+                    <!-- Sodium -->
+                    <a class="box metall" onclick="checkElement('Na')">
+                        <div class="Ozahl">11</div>
+                        <div class="Masse">22.99</div>
+                        <div class="ElSymbol">Na</div>
+                        <div class="Name">Natrium</div>
+                    </a>
+
+                    <!-- Magnesium -->
+                    <a class="box metall" onclick="checkElement('Mg')">
+                        <div class="Ozahl">12</div>
+                        <div class="Masse">24.31</div>
+                        <div class="ElSymbol">Mg</div>
+                        <div class="Name">Magnesium</div>
+                    </a>
+
+                    <!-- Aluminum -->
+                    <a class="box metall" onclick="checkElement('Al')">
+                        <div class="Ozahl">13</div>
+                        <div class="Masse">26.98</div>
+                        <div class="ElSymbol">Al</div>
+                        <div class="Name">Aluminium</div>
+                    </a>
+
+                    <!-- Silicon -->
+                    <a class="box hmetall" onclick="checkElement('Si')">
+                        <div class="Ozahl">14</div>
+                        <div class="Masse">28.09</div>
+                        <div class="ElSymbol">Si</div>
+                        <div class="Name">Silicium</div>
+                    </a>
+
+                    <!-- Phosphorus -->
+                    <a class="box nmetall" onclick="checkElement('P')">
+                        <div class="Ozahl">15</div>
+                        <div class="Masse">30.97</div>
+                        <div class="ElSymbol">P</div>
+                        <div class="Name">Phosphor</div>
+                    </a>
+
+                    <!-- Sulfur -->
+                    <a class="box nmetall" onclick="checkElement('S')">
+                        <div class="Ozahl">16</div>
+                        <div class="Masse">32.07</div>
+                        <div class="ElSymbol">S</div>
+                        <div class="Name">Schwefel</div>
+                    </a>
+
+                    <!-- Chlorine -->
+                    <a class="box nmetall" onclick="checkElement('Cl')">
+                        <div class="Ozahl">17</div>
+                        <div class="Masse">35.45</div>
+                        <div class="ElSymbol">Cl</div>
+                        <div class="Name">Chlor</div>
+                    </a>
+
+                    <!-- Argon -->
+                    <a class="box nmetall" onclick="checkElement('Ar')">
+                        <div class="Ozahl">18</div>
+                        <div class="Masse">39.95</div>
+                        <div class="ElSymbol">Ar</div>
+                        <div class="Name">Argon</div>
+                    </a>
+
+                    <!-- Kalium -->
+                    <a class="box metall" onclick="checkElement('K')">
+                        <div class="Ozahl">19</div>
+                        <div class="Masse">39.10</div>
+                        <div class="ElSymbol">K</div>
+                        <div class="Name">Kalium</div>
+                    </a>
+
+                    <!-- Calcium -->
+                    <a class="box metall" onclick="checkElement('Ca')">
+                        <div class="Ozahl">20</div>
+                        <div class="Masse">40.08</div>
+                        <div class="ElSymbol">Ca</div>
+                        <div class="Name">Calcium</div>
+                    </a>
+
+                    <!-- Scandium -->
+                    <a class="box metall" href="Elemente/Sc.html">
+                        <div class="Ozahl">21</div>
+                        <div class="Masse">44.96</div>
+                        <div class="ElSymbol">Sc</div>
+                        <div class="Name">Scandium</div>
+                    </a>
+
+                    <!-- Titanium -->
+                    <a class="box metall" href="Elemente/Ti.html">
+                        <div class="Ozahl">22</div>
+                        <div class="Masse">47.87</div>
+                        <div class="ElSymbol">Ti</div>
+                        <div class="Name">Titan</div>
+                    </a>   
+
+                   
+                        <!-- Vanadium -->
+                        <a class="box metall" href="Elemente/V.html">
+                            <div class="Ozahl">23</div>
+                            <div class="Masse">50.94</div>
+                            <div class="ElSymbol">V</div>
+                            <div class="Name">Vanadium</div>
+                        </a>
+                        
+                        <!-- Chromium -->
+                        <a class="box metall" href="Elemente/Cr.html">
+                            <div class="Ozahl">24</div>
+                            <div class="Masse">51.99</div>
+                            <div class="ElSymbol">Cr</div>
+                            <div class="Name">Chrom</div>
+                        </a>
+                        
+                        <!-- Manganese -->
+                        <a class="box metall" href="Elemente/Mn.html">
+                            <div class="Ozahl">25</div>
+                            <div class="Masse">54.94</div>
+                            <div class="ElSymbol">Mn</div>
+                            <div class="Name">Mangan</div>
+                        </a>
+                        
+                        <!-- Iron -->
+                        <a class="box metall" href="Elemente/Fe.html">
+                            <div class="Ozahl">26</div>
+                            <div class="Masse">55.85</div>
+                            <div class="ElSymbol">Fe</div>
+                            <div class="Name">Eisen</div>
+                        </a>
+                        
+                        <!-- Cobalt -->
+                        <a class="box metall" href="Elemente/Co.html">
+                            <div class="Ozahl">27</div>
+                            <div class="Masse">58.93</div>
+                            <div class="ElSymbol">Co</div>
+                            <div class="Name">Kobalt</div>
+                        </a>
+                        
+                        <!-- Nickel -->
+                        <a class="box metall" href="Elemente/Ni.html">
+                            <div class="Ozahl">28</div>
+                            <div class="Masse">58.69</div>
+                            <div class="ElSymbol">Ni</div>
+                            <div class="Name">Nickel</div>
+                        </a>
+                        
+                        <!-- Copper -->
+                        <a class="box metall" href="Elemente/Cu.html">
+                            <div class="Ozahl">29</div>
+                            <div class="Masse">63.55</div>
+                            <div class="ElSymbol">Cu</div>
+                            <div class="Name">Kupfer</div>
+                        </a>
+                        
+                        <!-- Zinc -->
+                        <a class="box metall" href="Elemente/Zn.html">
+                            <div class="Ozahl">30</div>
+                            <div class="Masse">65.38</div>
+                            <div class="ElSymbol">Zn</div>
+                            <div class="Name">Zink</div>
+                        </a>
+                        
+                        <!-- Gallium -->
+                        <a class="box metall" href="Elemente/Ga.html">
+                            <div class="Ozahl">31</div>
+                            <div class="Masse">69.72</div>
+                            <div class="ElSymbol">Ga</div>
+                            <div class="Name">Gallium</div>
+                        </a>
+                        
+                        <!-- Germanium -->
+                        <a class="box hmetall" href="Elemente/Ge.html">
+                            <div class="Ozahl">32</div>
+                            <div class="Masse">72.63</div>
+                            <div class="ElSymbol">Ge</div>
+                            <div class="Name">Germanium</div>
+                        </a>
+                        
+                        <!-- Arsenic -->
+                        <a class="box hmetall" href="Elemente/As.html">
+                            <div class="Ozahl">33</div>
+                            <div class="Masse">74.92</div>
+                            <div class="ElSymbol">As</div>
+                            <div class="Name">Arsen</div>
+                        </a>
+                        
+                        <!-- Selenium -->
+                        <a class="box hmetall" href="Elemente/Se.html">
+                            <div class="Ozahl">34</div>
+                            <div class="Masse">78.97</div>
+                            <div class="ElSymbol">Se</div>
+                            <div class="Name">Selen</div>
+                        </a>
+                        
+                        <!-- Bromine -->
+                        <a class="box nmetall" href="Elemente/Br.html">
+                            <div class="Ozahl">35</div>
+                            <div class="Masse">79.90</div>
+                            <div class="ElSymbol">Br</div>
+                            <div class="Name">Brom</div>
+                        </a>
+                        
+                        <!-- Krypton -->
+                        <a class="box nmetall" href="Elemente/Kr.html">
+                            <div class="Ozahl">36</div>
+                            <div class="Masse">83.80</div>
+                            <div class="ElSymbol">Kr</div>
+                            <div class="Name">Krypton</div>
+                        </a>
+                        
+                        <!-- Rubidium -->
+                        <a class="box metall" href="Elemente/Rb.html">
+                            <div class="Ozahl">37</div>
+                            <div class="Masse">85.47</div>
+                            <div class="ElSymbol">Rb</div>
+                            <div class="Name">Rubidium</div>
+                        </a>
+                        
+                        <!-- Strontium -->
+                        <a class="box metall" href="Elemente/Sr.html">
+                            <div class="Ozahl">38</div>
+                            <div class="Masse">87.62</div>
+                            <div class="ElSymbol">Sr</div>
+                            <div class="Name">Strontium</div>
+                        </a>
+                        
+                        <!-- Yttrium -->
+                        <a class="box metall" href="Elemente/Y.html">
+                            <div class="Ozahl">39</div>
+                            <div class="Masse">88.91</div>
+                            <div class="ElSymbol">Y</div>
+                            <div class="Name">Yttrium</div>
+                        </a>
+                        
+                        <!-- Zirconium -->
+                        <a class="box metall" href="Elemente/Zr.html">
+                            <div class="Ozahl">40</div>
+                            <div class="Masse">91.22</div>
+                            <div class="ElSymbol">Zr</div>
+                            <div class="Name">Zirkonium</div>
+                        </a>
+                        
+                        <!-- Niobium -->
+                        <a class="box metall" href="Elemente/Nb.html">
+                            <div class="Ozahl">41</div>
+                            <div class="Masse">92.91</div>
+                            <div class="ElSymbol">Nb</div>
+                            <div class="Name">Niob</div>
+                        </a>
+                        
+                        <!-- Molybdenum -->
+                        <a class="box metall" href="Elemente/Mo.html">
+                            <div class="Ozahl">42</div>
+                            <div class="Masse">95.95</div>
+                            <div class="ElSymbol">Mo</div>
+                            <div class="Name">Molybdän</div>
+                        </a>
+                        
+                        <!-- Technetium -->
+                        <a class="box metall rad" href="Elemente/Tc.html">
+                            <div class="Ozahl">43</div>
+                            <div class="Masse">(98)</div>
+                            <div class="ElSymbol">Tc</div>
+                            <div class="Name">Technetium</div>
+                        </a>
+                        
+                        <!-- Ruthenium -->
+                        <a class="box metall" href="Elemente/Ru.html">
+                            <div class="Ozahl">44</div>
+                            <div class="Masse">101.1</div>
+                            <div class="ElSymbol">Ru</div>
+                            <div class="Name">Ruthenium</div>
+                        </a>
+                                                <!-- Rhodium -->
+                        <a class="box metall" href="Elemente/Rh.html">
+                            <div class="Ozahl">45</div>
+                            <div class="Masse">102.9</div>
+                            <div class="ElSymbol">Rh</div>
+                            <div class="Name">Rhodium</div>
+                        </a>
+
+                        <!-- Palladium -->
+                        <a class="box metall" href="Elemente/Pd.html">
+                            <div class="Ozahl">46</div>
+                            <div class="Masse">106.4</div>
+                            <div class="ElSymbol">Pd</div>
+                            <div class="Name">Palladium</div>
+                        </a>
+
+                        <!-- Silver -->
+                        <a class="box metall" href="Elemente/Ag.html">
+                            <div class="Ozahl">47</div>
+                            <div class="Masse">107.9</div>
+                            <div class="ElSymbol">Ag</div>
+                            <div class="Name">Silber</div>
+                        </a>
+
+                        <!-- Cadmium -->
+                        <a class="box metall" href="Elemente/Cd.html">
+                            <div class="Ozahl">48</div>
+                            <div class="Masse">112.4</div>
+                            <div class="ElSymbol">Cd</div>
+                            <div class="Name">Cadmium</div>
+                        </a>
+
+                        <!-- Indium -->
+                        <a class="box metall" href="Elemente/In.html">
+                            <div class="Ozahl">49</div>
+                            <div class="Masse">114.8</div>
+                            <div class="ElSymbol">In</div>
+                            <div class="Name">Indium</div>
+                        </a>
+
+                        <!-- Tin -->
+                        <a class="box metall" href="Elemente/Sn.html">
+                            <div class="Ozahl">50</div>
+                            <div class="Masse">118.7</div>
+                            <div class="ElSymbol">Sn</div>
+                            <div class="Name">Zinn</div>
+                        </a>
+
+                        <!-- Antimony -->
+                        <a class="box hmetall" href="Elemente/Sb.html">
+                            <div class="Ozahl">51</div>
+                            <div class="Masse">121.8</div>
+                            <div class="ElSymbol">Sb</div>
+                            <div class="Name">Antimon</div>
+                        </a>
+
+                        <!-- Tellurium -->
+                        <a class="box hmetall" href="Elemente/Te.html">
+                            <div class="Ozahl">52</div>
+                            <div class="Masse">127.6</div>
+                            <div class="ElSymbol">Te</div>
+                            <div class="Name">Tellur</div>
+                        </a>
+
+                        <!-- Iodine -->
+                        <a class="box nmetall" href="Elemente/I.html">
+                            <div class="Ozahl">53</div>
+                            <div class="Masse">126.9</div>
+                            <div class="ElSymbol">I</div>
+                            <div class="Name">Iod</div>
+                        </a>
+
+                        <!-- Xenon -->
+                        <a class="box nmetall" href="Elemente/Xe.html">
+                            <div class="Ozahl">54</div>
+                            <div class="Masse">131.3</div>
+                            <div class="ElSymbol">Xe</div>
+                            <div class="Name">Xenon</div>
+                        </a>
+
+                        <!-- Cesium -->
+                        <a class="box metall" href="Elemente/Cs.html">
+                            <div class="Ozahl">55</div>
+                            <div class="Masse">132.9</div>
+                            <div class="ElSymbol">Cs</div>
+                            <div class="Name">Cäsium</div>
+                        </a>
+
+                        <!-- Barium -->
+                        <a class="box metall" href="Elemente/Ba.html">
+                            <div class="Ozahl">56</div>
+                            <div class="Masse">137.3</div>
+                            <div class="ElSymbol">Ba</div>
+                            <div class="Name">Barium</div>
+                        </a>
+                        <a class="box metall" id="La">
+                            <div class="Ozahl">57-71</div>
+                            <div class="Name">Lanthanoide</div> 
+                        </a>
+                                                <!-- Hafnium -->
+                        <a class="box metall" href="Elemente/Hf.html">
+                            <div class="Ozahl">72</div>
+                            <div class="Masse">178.5</div>
+                            <div class="ElSymbol">Hf</div>
+                            <div class="Name">Hafnium</div>
+                        </a>
+
+                        <!-- Tantalum -->
+                        <a class="box metall" href="Elemente/Ta.html">
+                            <div class="Ozahl">73</div>
+                            <div class="Masse">180.9</div>
+                            <div class="ElSymbol">Ta</div>
+                            <div class="Name">Tantal</div>
+                        </a>
+
+                        <!-- Tungsten -->
+                        <a class="box metall" href="Elemente/W.html">
+                            <div class="Ozahl">74</div>
+                            <div class="Masse">183.8</div>
+                            <div class="ElSymbol">W</div>
+                            <div class="Name">Wolfram</div>
+                        </a>
+
+                        <!-- Rhenium -->
+                        <a class="box metall" href="Elemente/Re.html">
+                            <div class="Ozahl">75</div>
+                            <div class="Masse">186.2</div>
+                            <div class="ElSymbol">Re</div>
+                            <div class="Name">Rhenium</div>
+                        </a>
+
+                        <!-- Osmium -->
+                        <a class="box metall" href="Elemente/Os.html">
+                            <div class="Ozahl">76</div>
+                            <div class="Masse">190.2</div>
+                            <div class="ElSymbol">Os</div>
+                            <div class="Name">Osmium</div>
+                        </a>
+
+                        <!-- Iridium -->
+                        <a class="box metall" href="Elemente/Ir.html">
+                            <div class="Ozahl">77</div>
+                            <div class="Masse">192.2</div>
+                            <div class="ElSymbol">Ir</div>
+                            <div class="Name">Iridium</div>
+                        </a>
+
+                        <!-- Platinum -->
+                        <a class="box metall" href="Elemente/Pt.html">
+                            <div class="Ozahl">78</div>
+                            <div class="Masse">195.1</div>
+                            <div class="ElSymbol">Pt</div>
+                            <div class="Name">Platin</div>
+                        </a>
+
+                        <!-- Gold -->
+                        <a class="box metall" href="Elemente/Au.html">
+                            <div class="Ozahl">79</div>
+                            <div class="Masse">197.0</div>
+                            <div class="ElSymbol">Au</div>
+                            <div class="Name">Gold</div>
+                        </a>
+
+                        <!-- Mercury -->
+                        <a class="box metall" href="Elemente/Hg.html">
+                            <div class="Ozahl">80</div>
+                            <div class="Masse">200.6</div>
+                            <div class="ElSymbol">Hg</div>
+                            <div class="Name">Quecksilber</div>
+                        </a>
+
+                        <!-- Thallium -->
+                        <a class="box metall" href="Elemente/Tl.html">
+                            <div class="Ozahl">81</div>
+                            <div class="Masse">204.4</div>
+                            <div class="ElSymbol">Tl</div>
+                            <div class="Name">Thallium</div>
+                        </a>
+
+                        <!-- Lead -->
+                        <a class="box metall" href="Elemente/Pb.html">
+                            <div class="Ozahl">82</div>
+                            <div class="Masse">207.2</div>
+                            <div class="ElSymbol">Pb</div>
+                            <div class="Name">Blei</div>
+                        </a>
+
+                        <!-- Bismuth -->
+                        <a class="box metall" href="Elemente/Bi.html">
+                            <div class="Ozahl">83</div>
+                            <div class="Masse">208.9</div>
+                            <div class="ElSymbol">Bi</div>
+                            <div class="Name">Bismut</div>
+                        </a>
+
+                        <!-- Polonium -->
+                        <a class="box metall rad" href="Elemente/Po.html">
+                            <div class="Ozahl">84</div>
+                            <div class="Masse">(209)</div>
+                            <div class="ElSymbol">Po</div>
+                            <div class="Name">Polonium</div>
+                        </a>
+
+                        <!-- Astatine -->
+                        <a class="box hmetall" href="Elemente/At.html">
+                            <div class="Ozahl">85</div>
+                            <div class="Masse">(210)</div>
+                            <div class="ElSymbol">At</div>
+                            <div class="Name">Astat</div>
+                        </a>
+
+                        <!-- Radon -->
+                        <a class="box nmetall" href="Elemente/Rn.html">
+                            <div class="Ozahl">86</div>
+                            <div class="Masse">(222)</div>
+                            <div class="ElSymbol">Rn</div>
+                            <div class="Name">Radon</div>
+                        </a>
+
+                        <!-- Francium -->
+                        <a class="box metall" href="Elemente/Fr.html">
+                            <div class="Ozahl">87</div>
+                            <div class="Masse">(223)</div>
+                            <div class="ElSymbol">Fr</div>
+                            <div class="Name">Francium</div>
+                        </a>
+
+                        <!-- Radium -->
+                        <a class="box metall" href="Elemente/Ra.html">
+                            <div class="Ozahl">88</div>
+                            <div class="Masse">(226)</div>
+                            <div class="ElSymbol">Ra</div>
+                            <div class="Name">Radium</div>
+                        </a>
+                        <a class="box metall" id="Ac">
+                            <div class="Ozahl">89-103</div>
+                            <div class="Name">Actinoide</div> 
+                        </a>
+                                        <!-- Rutherfordium -->
+                        <a class="box metall künst" href="Elemente/Rf.html">
+                            <div class="Ozahl">104</div>
+                            <div class="Masse">(267)</div>
+                            <div class="ElSymbol">Rf</div>
+                            <div class="Name">Rutherfordium</div>
+                        </a>
+
+                        <!-- Dubnium -->
+                        <a class="box metall künst" href="Elemente/Db.html">
+                            <div class="Ozahl">105</div>
+                            <div class="Masse">(270)</div>
+                            <div class="ElSymbol">Db</div>
+                            <div class="Name">Dubnium</div>
+                        </a>
+
+                        <!-- Seaborgium -->
+                        <a class="box metall künst" href="Elemente/Sg.html">
+                            <div class="Ozahl">106</div>
+                            <div class="Masse">(271)</div>
+                            <div class="ElSymbol">Sg</div>
+                            <div class="Name">Seaborgium</div>
+                        </a>
+
+                        <!-- Bohrium -->
+                        <a class="box metall künst" href="Elemente/Bh.html">
+                            <div class="Ozahl">107</div>
+                            <div class="Masse">(270)</div>
+                            <div class="ElSymbol">Bh</div>
+                            <div class="Name">Bohrium</div>
+                        </a>
+
+                        <!-- Hassium -->
+                        <a class="box metall künst" href="Elemente/Hs.html">
+                            <div class="Ozahl">108</div>
+                            <div class="Masse">(277)</div>
+                            <div class="ElSymbol">Hs</div>
+                            <div class="Name">Hassium</div>
+                        </a>
+
+                        <!-- Meitnerium -->
+                        <a class="box metall künst" href="Elemente/Mt.html">
+                            <div class="Ozahl">109</div>
+                            <div class="Masse">(276)</div>
+                            <div class="ElSymbol">Mt</div>
+                            <div class="Name">Meitnerium</div>
+                        </a>
+
+                        <!-- Darmstadtium -->
+                        <a class="box metall künst" href="Elemente/Ds.html">
+                            <div class="Ozahl">110</div>
+                            <div class="Masse">(281)</div>
+                            <div class="ElSymbol">Ds</div>
+                            <div class="Name">Darmstadtium</div>
+                        </a>
+
+                        <!-- Roentgenium -->
+                        <a class="box metall künst" href="Elemente/Rg.html">
+                            <div class="Ozahl">111</div>
+                            <div class="Masse">(280)</div>
+                            <div class="ElSymbol">Rg</div>
+                            <div class="Name">Roentgenium</div>
+                        </a>
+
+                        <!-- Copernicium -->
+                        <a class="box metall künst" href="Elemente/Cn.html">
+                            <div class="Ozahl">112</div>
+                            <div class="Masse">(285)</div>
+                            <div class="ElSymbol">Cn</div>
+                            <div class="Name">Copernicium</div>
+                        </a>
+
+                        <!-- Nihonium -->
+                        <a class="box metall künst" href="Elemente/Nh.html">
+                            <div class="Ozahl">113</div>
+                            <div class="Masse">(284)</div>
+                            <div class="ElSymbol">Nh</div>
+                            <div class="Name">Nihonium</div>
+                        </a>
+
+                        <!-- Flerovium -->
+                        <a class="box metall künst" href="Elemente/Fl.html">
+                            <div class="Ozahl">114</div>
+                            <div class="Masse">(289)</div>
+                            <div class="ElSymbol">Fl</div>
+                            <div class="Name">Flerovium</div>
+                        </a>
+
+                        <!-- Moscovium -->
+                        <a class="box metall künst" href="Elemente/Mc.html">
+                            <div class="Ozahl">115</div>
+                            <div class="Masse">(288)</div>
+                            <div class="ElSymbol">Mc</div>
+                            <div class="Name">Moscovium</div>
+                        </a>
+
+                        <!-- Livermorium -->
+                        <a class="box metall künst" href="Elemente/Lv.html">
+                            <div class="Ozahl">116</div>
+                            <div class="Masse">(293)</div>
+                            <div class="ElSymbol">Lv</div>
+                            <div class="Name">Livermorium</div>
+                        </a>
+
+                        <!-- Tennessine -->
+                        <a class="box nmetall künst" href="Elemente/Ts.html">
+                            <div class="Ozahl">117</div>
+                            <div class="Masse">(294)</div>
+                            <div class="ElSymbol">Ts</div>
+                            <div class="Name">Tennessine</div>
+                        </a>
+
+                        <!-- Oganesson -->
+                        <a class="box nmetall künst" href="Elemente/Og.html">
+                            <div class="Ozahl">118</div>
+                            <div class="Masse">(294)</div>
+                            <div class="ElSymbol">Og</div>
+                            <div class="Name">Oganesson</div>
+                        </a>
+                        </a>
+                        <a id="Lant" class="box">                          
+                            <div class="Name">Lanthanoide</div>
+                        </a>
+
+                                                <!-- Lanthanum -->
+                        <a class="box metall " href="Elemente/La.html">
+                            <div class="Ozahl">57</div>
+                            <div class="Masse">138.9</div>
+                            <div class="ElSymbol">La</div>
+                            <div class="Name">Lanthan</div>
+                        </a>
+
+                        <!-- Cerium -->
+                        <a class="box metall " href="Elemente/Ce.html">
+                            <div class="Ozahl">58</div>
+                            <div class="Masse">140.1</div>
+                            <div class="ElSymbol">Ce</div>
+                            <div class="Name">Cerium</div>
+                        </a>
+
+                        <!-- Praseodymium -->
+                        <a class="box metall " href="Elemente/Pr.html">
+                            <div class="Ozahl">59</div>
+                            <div class="Masse">140.9</div>
+                            <div class="ElSymbol">Pr</div>
+                            <div class="Name">Praseodym</div>
+                        </a>
+
+                        <!-- Neodymium -->
+                        <a class="box metall " href="Elemente/Nd.html">
+                            <div class="Ozahl">60</div>
+                            <div class="Masse">144.2</div>
+                            <div class="ElSymbol">Nd</div>
+                            <div class="Name">Neodym</div>
+                        </a>
+
+                        <!-- Promethium -->
+                        <a class="box metall " href="Elemente/Pm.html">
+                            <div class="Ozahl">61</div>
+                            <div class="Masse">(145)</div>
+                            <div class="ElSymbol">Pm</div>
+                            <div class="Name">Promethium</div>
+                        </a>
+
+                        <!-- Samarium -->
+                        <a class="box metall " href="Elemente/Sm.html">
+                            <div class="Ozahl">62</div>
+                            <div class="Masse">150.4</div>
+                            <div class="ElSymbol">Sm</div>
+                            <div class="Name">Samarium</div>
+                        </a>
+
+                        <!-- Europium -->
+                        <a class="box metall " href="Elemente/Eu.html">
+                            <div class="Ozahl">63</div>
+                            <div class="Masse">151.9</div>
+                            <div class="ElSymbol">Eu</div>
+                            <div class="Name">Europium</div>
+                        </a>
+
+                        <!-- Gadolinium -->
+                        <a class="box metall " href="Elemente/Gd.html">
+                            <div class="Ozahl">64</div>
+                            <div class="Masse">157.3</div>
+                            <div class="ElSymbol">Gd</div>
+                            <div class="Name">Gadolinium</div>
+                        </a>
+
+                        <!-- Terbium -->
+                        <a class="box metall " href="Elemente/Tb.html">
+                            <div class="Ozahl">65</div>
+                            <div class="Masse">158.9</div>
+                            <div class="ElSymbol">Tb</div>
+                            <div class="Name">Terbium</div>
+                        </a>
+
+                        <!-- Dysprosium -->
+                        <a class="box metall " href="Elemente/Dy.html">
+                            <div class="Ozahl">66</div>
+                            <div class="Masse">162.5</div>
+                            <div class="ElSymbol">Dy</div>
+                            <div class="Name">Dysprosium</div>
+                        </a>
+
+                        <!-- Holmium -->
+                        <a class="box metall " href="Elemente/Ho.html">
+                            <div class="Ozahl">67</div>
+                            <div class="Masse">164.9</div>
+                            <div class="ElSymbol">Ho</div>
+                            <div class="Name">Holmium</div>
+                        </a>
+
+                        <!-- Erbium -->
+                        <a class="box metall " href="Elemente/Er.html">
+                            <div class="Ozahl">68</div>
+                            <div class="Masse">167.3</div>
+                            <div class="ElSymbol">Er</div>
+                            <div class="Name">Erbium</div>
+                        </a>
+
+                        <!-- Thulium -->
+                        <a class="box metall " href="Elemente/Tm.html">
+                            <div class="Ozahl">69</div>
+                            <div class="Masse">168.9</div>
+                            <div class="ElSymbol">Tm</div>
+                            <div class="Name">Thulium</div>
+                        </a>
+
+                        <!-- Ytterbium -->
+                        <a class="box metall " href="Elemente/Yb.html">
+                            <div class="Ozahl">70</div>
+                            <div class="Masse">173.0</div>
+                            <div class="ElSymbol">Yb</div>
+                            <div class="Name">Ytterbium</div>
+                        </a>
+
+                        <!-- Lutetium -->
+                        <a class="box metall " href="Elemente/Lu.html">
+                            <div class="Ozahl">71</div>
+                            <div class="Masse">174.9</div>
+                            <div class="ElSymbol">Lu</div>
+                            <div class="Name">Lutetium</div>
+                        </a>
+
+
+                        <a id="Act" class="box">                          
+                            <div class="Name">Actinoide</div>
+                        </a>
+
+                        <!-- Actinium -->
+                        <a class="box metall " href="Elemente/Ac.html">
+                            <div class="Ozahl">89</div>
+                            <div class="Masse">(227)</div>
+                            <div class="ElSymbol">Ac</div>
+                            <div class="Name">Actinium</div>
+                        </a>
+
+                        <!-- Thorium -->
+                        <a class="box metall " href="Elemente/Th.html">
+                            <div class="Ozahl">90</div>
+                            <div class="Masse">232.0</div>
+                            <div class="ElSymbol">Th</div>
+                            <div class="Name">Thorium</div>
+                        </a>
+
+                        <!-- Protactinium -->
+                        <a class="box metall " href="Elemente/Pa.html">
+                            <div class="Ozahl">91</div>
+                            <div class="Masse">(231)</div>
+                            <div class="ElSymbol">Pa</div>
+                            <div class="Name">Protactinium</div>
+                        </a>
+
+                        <!-- Uranium -->
+                        <a class="box metall " href="Elemente/U.html">
+                            <div class="Ozahl">92</div>
+                            <div class="Masse">238.0</div>
+                            <div class="ElSymbol">U</div>
+                            <div class="Name">Uran</div>
+                        </a>
+
+                        <!-- Neptunium -->
+                        <a class="box metall künst" href="Elemente/Np.html">
+                            <div class="Ozahl">93</div>
+                            <div class="Masse">(237)</div>
+                            <div class="ElSymbol">Np</div>
+                            <div class="Name">Neptunium</div>
+                        </a>
+
+                        <!-- Plutonium -->
+                        <a class="box metall künst" href="Elemente/Pu.html">
+                            <div class="Ozahl">94</div>
+                            <div class="Masse">(244)</div>
+                            <div class="ElSymbol">Pu</div>
+                            <div class="Name">Plutonium</div>
+                        </a>
+
+                        <!-- Americium -->
+                        <a class="box metall künst" href="Elemente/Am.html">
+                            <div class="Ozahl">95</div>
+                            <div class="Masse">(243)</div>
+                            <div class="ElSymbol">Am</div>
+                            <div class="Name">Americium</div>
+                        </a>
+
+                        <!-- Curium -->
+                        <a class="box metall künst" href="Elemente/Cm.html">
+                            <div class="Ozahl">96</div>
+                            <div class="Masse">(247)</div>
+                            <div class="ElSymbol">Cm</div>
+                            <div class="Name">Curium</div>
+                        </a>
+
+                        <!-- Berkelium -->
+                        <a class="box metall künst" href="Elemente/Bk.html">
+                            <div class="Ozahl">97</div>
+                            <div class="Masse">(247)</div>
+                            <div class="ElSymbol">Bk</div>
+                            <div class="Name">Berkelium</div>
+                        </a>
+
+                        <!-- Californium -->
+                        <a class="box metall künst" href="Elemente/Cf.html">
+                            <div class="Ozahl">98</div>
+                            <div class="Masse">(251)</div>
+                            <div class="ElSymbol">Cf</div>
+                            <div class="Name">Californium</div>
+                        </a>
+
+                        <!-- Einsteinium -->
+                        <a class="box metall künst" href="Elemente/Es.html">
+                            <div class="Ozahl">99</div>
+                            <div class="Masse">(252)</div>
+                            <div class="ElSymbol">Es</div>
+                            <div class="Name">Einsteinium</div>
+                        </a>
+
+                        <!-- Fermium -->
+                        <a class="box metall künst" href="Elemente/Fm.html">
+                            <div class="Ozahl">100</div>
+                            <div class="Masse">(257)</div>
+                            <div class="ElSymbol">Fm</div>
+                            <div class="Name">Fermium</div>
+                        </a>
+
+                        <!-- Mendelevium -->
+                        <a class="box metall künst" href="Elemente/Md.html">
+                            <div class="Ozahl">101</div>
+                            <div class="Masse">(258)</div>
+                            <div class="ElSymbol">Md</div>
+                            <div class="Name">Mendelevium</div>
+                        </a>
+
+                        <!-- Nobelium -->
+                        <a class="box metall künst" href="Elemente/No.html">
+                            <div class="Ozahl">102</div>
+                            <div class="Masse">(259)</div>
+                            <div class="ElSymbol">No</div>
+                            <div class="Name">Nobelium</div>
+                        </a>
+
+                        <!-- Lawrencium -->
+                        <a class="box metall künst" href="Elemente/Lr.html" target="infIframe" >
+                            <div class="Ozahl">103</div>
+                            <div class="Masse">(262)</div>
+                            <div class="ElSymbol">Lr</div>
+                            <div class="Name">Lawrencium</div>
+                        </a>
+
+            
+                
+            </section>  
+			
+            <iframe id="infIframe" src='Elemente/H.html' scrolling="no" name="infIframe"></iframe>
+           
+            
+            
+              
+        </main>
+        <script>
+            
+            var infIframe = document.getElementById("infIframe");
+			var x = true; // flase = block true = none
+			var output = document.getElementById("output");
+			var closer = document.getElementById("close");
+            //var top = infIframe.offsetTop;
+            var left = infIframe.offsetLeft;
+            
+			function checkElement( par1 ){
+                var source = 'Elemente/'+ par1 +'.html';
+                var top = infIframe.offsetTop;
+                
+                
+                
+                // wenn es nicht angezeigt wird 
+                if(x){
+                    
+                    infIframe.src= source ;
+                    //aktuelle source zwischenspeichern
+                    output.innerHTML= source;
+
+                    infIframe.style.display ="block";
+                    
+                    
+                    infIframe.scrollIntoView();
+				    x = false;
+				} 
+                //wenn es angezeigt wird
+                else if(source != output.innerHTML) {
+                        
+                        //wenn es ausgewähltes element ungleich angezeigtem element
+                        
+                            infIframe.src= source ;
+                            infIframe.scrollIntoView();
+                            
+                            //aktuelle source zwischenspeichern
+                            output.innerHTML= source;
+                }
+                        
+                else {// wenn ausgewähltes element gleich angezeigtem element
+                            
+                            infIframe.style.display ="none";
+					        x = true;
+                        }
+						
+                    
+                    
+            }
+            window.addEventListener('message', function(event) {
+
+            if (event.data === 'closeIframe') {
+                
+                infIframe.style.display = 'none';
+                x= true;
+            }
+        });
+                
+
+                
+			
+		</script>
+    </body>
+</html>
