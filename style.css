@@ -114,14 +114,14 @@ a{text-align:center; text-decoration: none; color: black;}
 /*main{position: relative; overflow: scroll;}*/
 .infobox {display:none;}
 
-iframe {border: none; height: 100vh;  overflow: hidden; display: none ;}
+iframe {border: none; height: 100%; width: 100%;  overflow: hidden; display: none ;}
 #output{display: none;}
 .dragContainer {
        position: absolute;
        top: 50px;
        left: 50px;
        width: 400px;
-       height: 300px;
+       height: fit-content;
        border: 1px solid #ccc;
        overflow: hidden;
    }
