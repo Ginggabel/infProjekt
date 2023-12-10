@@ -1022,8 +1022,10 @@
                 
             </section>  
 			
-            <iframe id="infIframe" src='Elemente/H.html' scrolling="no" name="infIframe"></iframe>
-           
+            <div class="dragContainer">
+                <div id="dragHeader">Informationen</div>
+                <iframe id="infIframe" src='Elemente/H.html' scrolling="no" name="infIframe"></iframe>
+            </div>
             
             
               
@@ -1089,7 +1091,7 @@
             });	
 		</script>
         <script>
-            const header = document.getElementById('draggable-header');
+            const header = document.getElementById('dragHeader');
             const iframe = document.getElementById('infIframe');
 
             let isDragging = false;
