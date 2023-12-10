@@ -125,3 +125,8 @@ iframe {border: none; height: 100vh;  overflow: hidden; display: none ;}
        border: 1px solid #ccc;
        overflow: hidden;
    }
+   .dragHeader {
+       background-color: #f1f1f1;
+       padding: 10px;
+       cursor: move;
+   }
