@@ -114,7 +114,7 @@ a{text-align:center; text-decoration: none; color: black;}
 /*main{position: relative; overflow: scroll;}*/
 .infobox {display:none;}
 
-iframe {border: none; height: 100%; width: 100%;  overflow: hidden; display: none ; position: absolute;}
+iframe {border: none; height: 100%; width: auto;  overflow: hidden; display: none ; position: absolute;}
 #output{display: none;}
 .dragContainer {
        position: absolute;
