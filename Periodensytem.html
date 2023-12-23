@@ -1041,8 +1041,8 @@
 			var x = true; // flase = block true = none
 			var output = document.getElementById("output");
 			var closer = document.getElementById("close");
-            //var top = infIframe.offsetTop;
-            var left = infIframe.offsetLeft;
+            
+            
             
 			function checkElement( par1 ){
                 var source = 'Elemente/'+ par1 +'.html';
@@ -1087,8 +1087,6 @@
                     
                     
             }
-        </script>
-        <script>
             window.addEventListener('message', function(event) {
 
             if (event.data === 'closeIframe') {
@@ -1098,32 +1096,5 @@
             }
             });	
 		</script>
-        <script>
-            const header = document.getElementById('dragHeader');
-            const iframe = document.getElementById('infIframe');
-
-            let isDragging = false;
-            let offsetX, offsetY;
-
-            header.addEventListener('mousedown', (e) => {
-                isDragging = true;
-                offsetX = e.clientX - iframe.getBoundingClientRect().left;
-                offsetY = e.clientY - iframe.getBoundingClientRect().top;
-            });
-
-            document.addEventListener('mouseup', () => {
-                isDragging = false;
-            });
-
-            document.addEventListener('mousemove', (e) => {
-                if (isDragging) {
-                    const x = e.clientX - offsetX;
-                    const y = e.clientY - offsetY;
-
-                    iframe.style.left = `${x}px`;
-                    iframe.style.top = `${y}px`;
-                }
-            });
-        </script>
     </body>
 </html>
