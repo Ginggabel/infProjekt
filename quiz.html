@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <title>Quiz</title>
+        <style>
+            section{ display: none;}
+        </style>
+    </head>
+    <body>
+        <section id="q1">
+            <div class="question">
+              <h1>nigga1</h1>
+            </div>
+        
+            <div class="answer">
+            </div> 
+        </section>
+        
+        <section id="q2">
+            <div class="question">
+              <h1>nigga2</h1>
+            </div>
+        
+            <div class="answer">
+            </div> 
+        </section>
+
+        <section id="q3">
+            <div class="question">
+              <h1>nigga3</h1>
+            </div>
+        
+            <div class="answer">
+            </div> 
+        </section>
+
+        <script>
+            var curQues = 1;
+            function setQuestion(){
+
+                document.getElementById("q"+curQues).style.display = "block";
+                curQues+=1;
+
+            }
+        </script>
+    </body>
+</html>
