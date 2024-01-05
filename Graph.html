@@ -4,68 +4,75 @@
 	<head>
 		<title></title>
 		<meta charset=utf-8>
-        <style>
-            h1, div
-            {
-                display:flex;
-                justify-content: center;
-                text-align: center;
-            }
-            p
-            {
-                display:flex;
-                justify-content: center;
-                text-align: center;
-                background-color: #ffffff;
-                color: #929292;
-            }
-            #II
-            {
-                display: flex;
-                justify-content: end;
-            }
-            #container
-            {
-                display: grid;
-                grid-template-columns: 50% 50%;
-            }
-            input:focus 
-            {
-                background-color: aquamarine;
-            }
-        </style>
+		<link rel="stylesheet" href="style.css">
+        	<style>
+            		h1, div
+            		{
+                		display:flex;
+                		justify-content: center;
+                		text-align: center;
+            		}
+            		p
+            		{
+                		display:flex;
+                		justify-content: center;
+                		text-align: center;
+                		background-color: #ffffff;
+                		color: #929292;
+            		}
+            		#II
+            		{
+                		display: flex;
+                		justify-content: end;
+            		}
+            		#container
+            		{
+                		display: grid;
+                		grid-template-columns: 50% 50%;
+            		}
+            		input:focus 
+            		{
+                		background-color: aquamarine;
+            		}
+        	</style>
 	</head>
-    <header>
-        <h1>
-            Funktionsgleichungen
-        </h1>
-    </header>
+    
 	<body>
-        <div id="container">
-            <div>
-                <label>
-                    Spannweite der x-Achse:
-                </label>
-                <input type="number" id="Spannweite">
-                <input type="button" onclick="Z()">
-            </div>
-            <div>
-                <label for="Test">
-                    Funktion:
-                </label>
-                <input type="text" id="F">
-                <button onclick="T()">Visualisieren</button>
-            </div>
-        </div>
-        <canvas id="Graph"></canvas>
-        <script src="test0.js"></script>	
+		<header>
+        		<h1>
+            			Funktionsgleichungen
+        		</h1>
+    		</header>
+		<nav id="topbar">
+            		<a id="e1" href="index.html">Home</a>
+            		<a id="e2" href="Periodensytem.html">Periodensystem</a>
+			<a id="e3" href="Funktionen.html">Funktionsgleichungen</a>
+        	</nav>
+        	<div id="container">
+            		<div>
+                		<label>
+                    			Spannweite der x-Achse:
+                		</label>
+                		<input type="number" id="Spannweite">
+                		<input type="button" onclick="Z()">
+            		</div>
+            		<div>
+                		<label for="Test">
+                    			Funktion:
+                		</label>
+                		<input type="text" id="F">
+                		<button onclick="T()">Visualisieren</button>
+            		</div>
+        	</div>
+        	<canvas id="Graph"></canvas>
+        	<script src="test0.js"></script>
+		<footer>
+        		<p>
+            			eine Webseite von Justus Blackert und Abd-al-Rahman Syed Mohammed Abuthakir
+        		</p>
+        		<p id="II">
+            			zuletzt bearbeitet am 06.12.2023 von Abd-al-Rahman Syed Mohammed Abuthakir
+        		</p>
+		</footer>
 	</body>
-    <footer>
-        <p>
-            eine Webseite von Justus Blackert und Abd-al-Rahman Syed Mohammed Abuthakir
-        </p>
-        <p id="II">
-            zuletzt bearbeitet am 06.12.2023 von Abd-al-Rahman Syed Mohammed Abuthakir
-        </p>
-	</footer>
 </html>
