@@ -4,46 +4,174 @@
         <meta charset="UTF-8">
         <title>Quiz</title>
         <style>
-            section{ display: none;}
+            body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+          }
+
+          .quiz-container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            height: 50vh;
+            width: 30vw;
+          }
+
+          h1 {
+            color: #333;
+          }
+
+          button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+          }
+
+          button:hover {
+            background-color: #0056b3;
+          }
+
+           #timer {position: fixed; top: 25%; right: 38vw;}
         </style>
     </head>
     <body>
-        <button onclick="setQuestion()">Gigga</button>
-        <section id="q1">
-            <div class="question">
-              <h1>nigga1</h1>
-            </div>
-        
-            <div class="answer">
-            </div> 
-        </section>
-        
-        <section id="q2">
-            <div class="question">
-              <h1>nigga2</h1>
-            </div>
-        
-            <div class="answer">
-            </div> 
-        </section>
-
-        <section id="q3">
-            <div class="question">
-              <h1>nigga3</h1>
-            </div>
-        
-            <div class="answer">
-            </div> 
-        </section>
+      <div id="timer">10</div>
+        <div class="quiz-container">
+          <h1>Quiz</h1>
+          
+          <div id="question-container"></div>
+          <div id="options-container"></div>
+          <button id="next-button">Next</button>
+        </div>
 
         <script>
-            var curQues = 1;
-            function setQuestion(){
+          var time = 10;
+          var toCount = true;
+          var points = 0;
+            const quizData = [
+                {
+                    question: 'Welches Gas ist am häufigsten in der Erdatmosphäre vorhanden?',
+                    options: ['Sauerstoff', 'Wasserstoff', 'Stickstoff', 'Helium'],
+                    correctAnswer: 'Stickstoff'
+                },
+                {
+                    question: 'Welcher Planet ist der größte in unserem Sonnensystem?',
+                    options: ['Erde', 'Mars', 'Uranus', 'Jupiter'],
+                    correctAnswer: 'Jupiter'
+                },
+                {
+                    question: 'Was ist die Formel für die maximale Elektronenanzahl in einer Atomschale',
+                    options: ['2n', 'n²+2', '(n+2)²', '2n²'],
+                    correctAnswer: '2n²'
+                },
+                {
+                    question: 'Nenne eine Edelgas',
+                    isTextInput: true,
+                    correctAnswer: ['helium', 'neon', 'argon', 'krypton','xenon','radon','oganesson']
+                }
+            ];
 
-                document.getElementById("q"+curQues).style.display = "block";
-                curQues+=1;
+                  let currentQuestionIndex = 0;
 
-            }
+                  const questionContainer = document.getElementById('question-container');
+                  const optionsContainer = document.getElementById('options-container');
+                  const nextButton = document.getElementById('next-button');
+
+                  function loadQuestion() {
+                    const currentQuestion = quizData[currentQuestionIndex];
+                    questionContainer.textContent = currentQuestion.question;
+                    if (currentQuestion.isTextInput) {
+                      optionsContainer.innerHTML = '';
+                      const input = document.createElement('input');
+                      input.setAttribute('type', 'text');
+                      input.setAttribute('id', 'text-input');
+                      optionsContainer.appendChild(input);
+                    } else {
+                    optionsContainer.innerHTML = '';
+                    currentQuestion.options.forEach((option, index) => {
+                      const button = document.createElement('button');
+                      button.textContent = option;
+                      button.addEventListener('click', () => checkAnswer(index));
+                      optionsContainer.appendChild(button);
+                    });
+                    } 
+                   y = setInterval(timer, 1000);
+                  }
+
+                  function checkAnswer(selectedIndex) {
+                        const currentQuestion = quizData[currentQuestionIndex];
+
+                        if (currentQuestion.isTextInput) {
+                          const userInput = document.getElementById('text-input').value.toLowerCase();
+                          if (currentQuestion.correctAnswer.includes(userInput)) {
+                            alert('Richtig!');
+                            points+=20;
+                          } else {
+                            alert('Falsch!');
+                          }
+                        } else {
+                          if (currentQuestion.options[selectedIndex] === currentQuestion.correctAnswer) {
+                            alert('Richtig!');
+                            points+=20;
+                          } else {
+                            alert('Falsch!');
+                          }
+                        }
+                        clearInterval(y)
+
+                        currentQuestionIndex++;
+                        if (currentQuestionIndex < quizData.length) {
+                          loadQuestion();
+                          time = 10;
+                        } else {
+                          alert('Erreichte Punktzahl:'+points+"/80");
+                          currentQuestionIndex = 0; // Reset the index for future attempts
+                          loadQuestion(); // Load the first question for a new attempt
+                        }
+                      }
+
+                      nextButton.addEventListener('click', () => {
+                        if (currentQuestionIndex < quizData.length - 1) {
+                          loadQuestion();
+                        } else {
+                          // If on the last question, check the answer and handle completion
+                          checkAnswer(-1); // Passing -1 to indicate that no option was selected
+                        }
+                      });
+
+
+                  // Load the first question when the page loads
+                  loadQuestion();
+
+                  function timer(){
+                  if( time > 0 && toCount == true){
+                            
+                  time--;
+                  document.getElementById("timer").innerHTML = time ;}
+                  if(time === 0){
+                    clearInterval(y)
+                    document.getElementById("timer").innerHTML = time ;
+                    alert("Zeit abgelaufen!")
+                    currentQuestionIndex++;
+                          loadQuestion();
+                          time = 10;
+                          document.getElementById("timer").innerHTML = time ;
+                         
+                  }
+                }
+                  
+
         </script>
     </body>
 </html>
