@@ -1,7 +1,6 @@
 function Z() 
 {
   window.SpannweiteInput = -0.5 * document.getElementById("Spannweite").value
-  console.log(SpannweiteInput)
 }
 
 function T()
@@ -28,11 +27,8 @@ function T()
   for (let x = SpannweiteInput; x < -1 * SpannweiteInput + 1; x++) 
   {
     let ffg = fg.replaceAll(Variablen[0], "("+ x +")")
-    console.log(ffg)
     let xWert = x
     let fWert = eval(ffg)
-    console.log(xWert)
-    console.log(fWert)
     let xKoordinate = 0.5 * canvas1.width + xWert
     let yKoordinate = 0.5 * canvas1.height - fWert
     g.fillRect(xKoordinate, yKoordinate, 1, 1)
