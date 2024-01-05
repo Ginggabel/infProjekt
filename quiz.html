@@ -37,7 +37,7 @@
             cursor: pointer;
             font-size: 16px;
           }
-
+          #next-button{display: none; position: absolute; top: 14.5vh; right: 13.8vw;}
           button:hover {
             background-color: #0056b3;
           }
@@ -74,7 +74,7 @@
           <div id="timer">10</div>
           <div id="question-container"></div>
           <div id="options-container"></div>
-          <button id="next-button">Next</button>
+          <button id="next-button">Check</button>
         </div>
       </section>
         <script>
@@ -124,6 +124,7 @@
                       input.setAttribute('type', 'text');
                       input.setAttribute('id', 'text-input');
                       optionsContainer.appendChild(input);
+                      nextButton.style.display = "block";
                     } else {
                     optionsContainer.innerHTML = '';
                     currentQuestion.options.forEach((option, index) => {
@@ -162,6 +163,7 @@
                           loadQuestion();
                           time = 10;
                         } else {
+                          nextButton.style.display = "none";
                           alert('Erreichte Punktzahl:'+points+"/100");
                           currentQuestionIndex = 0; 
                           loadQuestion(); 
