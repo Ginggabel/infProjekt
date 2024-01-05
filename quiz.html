@@ -32,7 +32,7 @@
             background-color: #007bff;
             color: #fff;
             border: none;
-            padding: 15px 30px;
+            padding: 10px 20px;
             border-radius: 4px;
             cursor: pointer;
             font-size: 16px;
@@ -89,12 +89,12 @@
                 },
                 {
                     question: 'Welcher Planet ist der größte in unserem Sonnensystem?',
-                    options: ['Erde', 'Mars', 'Uranus', 'Jupiter'],
+                    options: ['Jupiter', 'Mars', 'Uranus', 'Erde'],
                     correctAnswer: 'Jupiter'
                 },
                 {
                     question: 'Was ist die Formel für die maximale Elektronenanzahl in einer Atomschale',
-                    options: ['2n', 'n²+2', '(n+2)²', '2n²'],
+                    options: ['2n', '2n²', '(n+2)²', 'n²+2'],
                     correctAnswer: '2n²'
                 },
                 {
@@ -170,9 +170,11 @@
 
                       nextButton.addEventListener('click', () => {
                         if (currentQuestionIndex < quizData.length - 1) {
-                          loadQuestion();
-                        } else {
+                          clearInterval(y);
+                          checkAnswer();
                           
+                        } else {
+                          clearInterval(y);
                           checkAnswer(-1); 
                         }
                       });
