@@ -7,7 +7,7 @@
        align-items: center;
        justify-content: center;
 }
-/*navbar*/
+
 
 /*Grid*/
 
@@ -116,20 +116,8 @@ a{text-align:center; text-decoration: none; color: black;}
 
 iframe {border: none; height: 100%; width: auto;  overflow: hidden; display: none ; position: absolute;}
 #output{display: none;}
-.dragContainer {
-       position: absolute;
-       top: 50px;
-       left: 50px;
-       width: 400px;
-       height: fit-content;
-       border: 1px solid #ccc;
-       overflow: hidden;
-   }
-   .dragHeader {
-       background-color: #f1f1f1;
-       padding: 10px;
-       cursor: move;
-   }
+
+   /*navbar*/
    #topbar{
     position: sticky;
     top:0;

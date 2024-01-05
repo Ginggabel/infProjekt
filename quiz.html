@@ -4,10 +4,9 @@
         <meta charset="UTF-8">
         <title>Quiz</title>
         <style>
-            body {
-            font-family: 'Arial', sans-serif;
+          body {font-family: 'Arial', sans-serif; margin: 0;}
+            section {
             background-color: #f4f4f4;
-            margin: 0;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -22,6 +21,7 @@
             text-align: center;
             height: 50vh;
             width: 30vw;
+            position: relative;
           }
 
           h1 {
@@ -42,19 +42,41 @@
             background-color: #0056b3;
           }
 
-           #timer {position: fixed; top: 25%; right: 38vw;}
+           #timer {position: absolute; top: 1vh; right: 1vw;}
+           #topbar{
+            
+    position: sticky;
+    top:0;
+    overflow: hidden;
+    background-color: #666666;  
+}
+#topbar a {
+    float: left;
+    color: #ffffff !important;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+#topbar a:hover {background-color: #555555;}
         </style>
     </head>
     <body>
-      <div id="timer">10</div>
+      <nav id="topbar">
+        <a id="e1" href="index.html">Home</a>
+        <a id="e2" href="Periodensytem.html">Periodensystem</a>
+        <a id="e3" href="Einführung.html">Funktionsgleichungen</a>
+        <a id="e4" href="quiz.html">Quiz</a>
+    </nav>
+      <section>
         <div class="quiz-container">
           <h1>Quiz</h1>
-          
+          <div id="timer">10</div>
           <div id="question-container"></div>
           <div id="options-container"></div>
           <button id="next-button">Next</button>
         </div>
-
+      </section>
         <script>
           var time = 10;
           var toCount = true;
@@ -79,6 +101,11 @@
                     question: 'Nenne eine Edelgas',
                     isTextInput: true,
                     correctAnswer: ['helium', 'neon', 'argon', 'krypton','xenon','radon','oganesson']
+                },
+                {
+                    question: 'Nenne ein Gebit der Physik',
+                    isTextInput: true,
+                    correctAnswer: ['optik', 'mechanik', 'thermodynamik', 'elektrik','kernphysik']
                 }
             ];
 
@@ -135,9 +162,9 @@
                           loadQuestion();
                           time = 10;
                         } else {
-                          alert('Erreichte Punktzahl:'+points+"/80");
-                          currentQuestionIndex = 0; // Reset the index for future attempts
-                          loadQuestion(); // Load the first question for a new attempt
+                          alert('Erreichte Punktzahl:'+points+"/100");
+                          currentQuestionIndex = 0; 
+                          loadQuestion(); 
                         }
                       }
 
@@ -145,13 +172,13 @@
                         if (currentQuestionIndex < quizData.length - 1) {
                           loadQuestion();
                         } else {
-                          // If on the last question, check the answer and handle completion
-                          checkAnswer(-1); // Passing -1 to indicate that no option was selected
+                          
+                          checkAnswer(-1); 
                         }
                       });
 
 
-                  // Load the first question when the page loads
+                  
                   loadQuestion();
 
                   function timer(){
@@ -161,7 +188,7 @@
                   document.getElementById("timer").innerHTML = time ;}
                   if(time === 0){
                     clearInterval(y)
-                    document.getElementById("timer").innerHTML = time ;
+                    
                     alert("Zeit abgelaufen!")
                     currentQuestionIndex++;
                           loadQuestion();
